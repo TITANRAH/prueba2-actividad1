@@ -15,5 +15,7 @@
     </testcase>
     <testcase classname="maths 2 es par" name="maths 2 es par" time="0">
     </testcase>
+    <testcase classname="maths 2^3=8" name="maths 2^3=8" time="0.001">
+    </testcase>
   </testsuite>
 </testsuites>
