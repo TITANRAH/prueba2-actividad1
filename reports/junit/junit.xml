@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="4" failures="0" errors="0" time="0.186">
-  <testsuite name="maths" errors="0" failures="0" skipped="0" timestamp="2025-08-30T01:47:09" time="0.077" tests="4">
-    <testcase classname="maths 2+3=5" name="maths 2+3=5" time="0">
+<testsuites name="jest tests" tests="5" failures="0" errors="0" time="0.17">
+  <testsuite name="maths" errors="0" failures="0" skipped="0" timestamp="2025-08-30T11:29:52" time="0.054" tests="5">
+    <testcase classname="maths 2+3=5" name="maths 2+3=5" time="0.001">
     </testcase>
     <testcase classname="maths 5-3=2" name="maths 5-3=2" time="0">
     </testcase>
     <testcase classname="maths 2*3=6" name="maths 2*3=6" time="0">
     </testcase>
     <testcase classname="maths 6/3=2" name="maths 6/3=2" time="0">
+    </testcase>
+    <testcase classname="maths 2^3=8" name="maths 2^3=8" time="0.001">
     </testcase>
   </testsuite>
 </testsuites>
