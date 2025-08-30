@@ -6,7 +6,7 @@ const config = {
   coverageDirectory: "coverage",
   coverageReporters: ["text", "lcov", "html"],
   collectCoverageFrom: [
-    "lib/**/*.{ts,tsx,js,jsx}",
+    "libs/**/*.{ts,tsx,js,jsx}",
     "!**/__tests__/**",
     "!**/*.d.ts",
   ],
