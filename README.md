@@ -90,7 +90,8 @@ on:
     branches: [develop, main]    # Se activa en push directo a estas ramas
   workflow_dispatch: {}          # Permite ejecución manual
 ````
-![Ejecución de tests](./yml.png)
+
+![Archivo Yml](./public/yml.png)
 
 #### Pasos que ejecuta el robot:
 
