@@ -1,36 +1,147 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Maths Functions Library
+
+**Repositorio:** [https://github.com/TITANRAH/prueba2-actividad1](https://github.com/TITANRAH/prueba2-actividad1)
+
+Una biblioteca de funciones matemáticas construida con Next.js, TypeScript y Jest, con pipeline de CI/CD automatizado.
+
+## Características
+
+- **Funciones matemáticas**: suma, resta, multiplicación, división, potencia, raíz cuadrada, verificación de paridad
+- **Testing completo** con Jest y cobertura del 100%
+- **CI/CD pipeline** con GitHub Actions
+- **Status checks obligatorios** para merge seguro
+- **TypeScript** para type safety
+- **Next.js 15** con App Router
 
 ## Getting Started
 
-First, run the development server:
+### Instalación
+
+```bash
+npm install
+```
+
+### Desarrollo
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el el sitio.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Testing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Ejecutar tests
+
+# Tests con coverage
+
+npm run test:ci
+
+```
+
+### Cobertura de código
+
+- **Statements**: 100%
+- **Branches**: 100%
+- **Functions**: 100%
+- **Lines**: 100%
+
+### Funciones testeadas
+
+- `suma(a, b)` - Suma dos números
+- `resta(a, b)` - Resta dos números
+- `multiplicacion(a, b)` - Multiplica dos números
+- `division(a, b)` - Divide dos números
+- `potencia(a, b)` - Eleva un número a una potencia
+- `raiz(a)` - Calcula la raíz cuadrada de un número
+- `isPar(a)` - Verifica si un número es par
+
+## CI/CD Pipeline
+
+### GitHub Actions
+
+El proyecto incluye un workflow automatizado que se ejecuta en:
+
+- **Pull Requests** hacia `develop` o `main`
+- **Push** directo a `develop` o `main`
+- **Ejecución manual** (workflow_dispatch)
+
+### Status Checks
+
+- **"CI / Tests"** es un status check obligatorio
+- **No se puede hacer merge** hasta que pasen todos los tests
+- **Cobertura del 100%** requerida para merge
+- **Branch protection** activa en `develop` y `main`
+
+### Workflow Steps
+
+1. **Checkout** del código
+2. **Setup Node.js** 20
+3. **Instalación** de dependencias (`npm ci`)
+4. **Ejecución** de tests (`npm run test:ci`)
+5. **Upload** de artifacts (coverage y reportes)
+
+## Branch Protection
+
+- **Require PR**: Solo se permite merge a través de Pull Requests
+- **Status Checks**: Tests obligatorios antes del merge
+- **Up to date**: Las ramas deben estar actualizadas
+- **Force push**: Bloqueado para mantener integridad
+
+## Estructura del Proyecto
+
+```
+
+prueba2-actividad1/
+├── .github/workflows/ # GitHub Actions workflows
+│ └── ci.yml # Pipeline de CI/CD
+├── libs/ # Biblioteca de funciones
+│ └── maths.ts # Funciones matemáticas
+├── tests/ # Tests unitarios
+│ └── maths.spec.ts # Tests de funciones matemáticas
+├── coverage/ # Reportes de cobertura
+├── reports/ # Reportes de tests
+└── app/ # Aplicación Next.js
+
+```
+
+## Tecnologías
+
+- **Next.js 15** - Framework de React
+- **TypeScript** - Tipado estático
+- **Jest** - Framework de testing
+- **GitHub Actions** - CI/CD pipeline
+- **ts-jest** - Preset de Jest para TypeScript
 
 ## Learn More
-
-To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Contribución
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Flujo de trabajo
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Crear una rama** desde `develop`
+2. **Desarrollar** tu funcionalidad
+3. **Agregar tests** para nueva funcionalidad
+4. **Crear Rama**  `feat/ fix/ etc`
+5. **Crear Pull Request** hacia `develop`
+6. **Esperar** que pasen los status checks
+7. **Merge** después de los status checks
+
+### Requisitos
+
+- ✅ Todos los tests deben pasar
+- ✅ Cobertura del 100% mantenida
+- ✅ Sin conflictos de merge
+- ✅ Code review aprobado
+
+## Deploy
+
+### Otros proveedores
+
+Consulta la [documentación de deployment de Next.js](https://nextjs.org/docs/app/building-your-application/deploying) para más detalles.
+```
