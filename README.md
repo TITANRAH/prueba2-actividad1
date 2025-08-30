@@ -101,6 +101,43 @@ on:
 4. Ejecución de tests - Corre todos los tests para verificar que funcione
 5. Upload de artifacts - Guarda los reportes de coverage y tests
 
+
+### Create workflow img:
+
+![Archivo Create workflow ](./public/create-workflow.png)
+
+### Workflow img:
+
+![Archivo workflow ](./public/workflow.png)
+
+#### Creamos reglas de bloqueo del merge si no cumple con los checks:
+
+![Archivo rules branch ](./public/rules-branch.png)
+
+#### Creamos una nueva funcion para saber si el número es par:
+
+ route: libs/maths.ts
+
+ function: export const isPar = (a:number)=>a%2===0;
+
+ test: it("2 es par", () => expect(isPar(2)).toBe(true));
+
+#### Hicimos el commit luego el pull request:
+
+![Archivo Pull Request is par function](./public/pull-request-is-par.png)
+
+### Si no pasa los checks no se habilita el merge request:
+
+![Archivo Blocked merge](./public/blocked-merge.png)
+
+### Merge complet all checks
+
+![Archivo Merge complete](./public/merge-check.png.png)
+
+### Coverage report img:
+
+![Archivo Coverage Report](./public/coverage.png)
+
 #### ¿Por qué es importante?
 
 - Detecta errores antes de que lleguen a producción
