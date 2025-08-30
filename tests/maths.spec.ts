@@ -1,4 +1,4 @@
-import { suma, resta, multiplicacion, division, potencia, raiz } from "@/libs/maths";
+import { suma, resta, multiplicacion, division, potencia, raiz, isPar } from "@/libs/maths";
 
 describe("maths", () => {
   it("2+3=5", () => expect(suma(2,3)).toBe(5));
@@ -7,4 +7,5 @@ describe("maths", () => {
   it("6/3=2", () => expect(division(6,3)).toBe(2));
   it("2^3=8", () => expect(potencia(2,3)).toBe(8));
   it("sqrt(4)=2", () => expect(raiz(4)).toBe(2));
+  it("2 es par", () => expect(isPar(2)).toBe(true));
 });

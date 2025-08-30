@@ -4,3 +4,4 @@ export const multiplicacion = (a:number,b:number)=>a*b;
 export const division = (a:number,b:number)=>a/b;
 export const potencia = (a:number,b:number)=>a**b;
 export const raiz = (a:number)=>Math.sqrt(a);
+export const isPar = (a:number)=>a%2===0;
